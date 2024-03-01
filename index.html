@@ -45,12 +45,7 @@
       box-shadow: 1px 1px 1px #000;
     }
   </style>
-  <script src="js/main.js" type="module" defer></script>
-  <!-- Crie um script adicional para exportar a função calculadora no escopo global -->
-  <script type="module">
-    import { calculadora } from "./js/main.js";
-    window.calculadora = calculadora;
-  </script>
+  <script src="js/index.js" type="module" defer></script>
 </head>
 
 <body style="background: #D9D9D9">
@@ -64,37 +59,35 @@
           <input type="text" class="form-control resultado" placeholder="0" disabled="disabled" />
 
           <div class="row">
-            <button type="button" class="btn btn-dark btn-lg clear font-weight-light"
-              onclick="calculadora('C')">C</button>
-            <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="calculadora('/')">/</button>
-            <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="calculadora('*')">x</button>
+            <button type="button" class="btn btn-dark btn-lg clear font-weight-light" data-value="C">C</button>
+            <button type="button" class="btn btn-dark btn-lg font-weight-light" data-value="/">/</button>
+            <button type="button" class="btn btn-dark btn-lg font-weight-light" data-value="*">x</button>
           </div>
 
           <div class="row">
-            <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="calculadora('7')">7</button>
-            <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="calculadora('8')">8</button>
-            <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="calculadora('9')">9</button>
-            <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="calculadora('-')">-</button>
+            <button type="button" class="btn btn-dark btn-lg font-weight-light" data-value="7">7</button>
+            <button type="button" class="btn btn-dark btn-lg font-weight-light" data-value="8">8</button>
+            <button type="button" class="btn btn-dark btn-lg font-weight-light" data-value="9">9</button>
+            <button type="button" class="btn btn-dark btn-lg font-weight-light" data-value="-">-</button>
           </div>
 
           <div class="row">
-            <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="calculadora('4')">4</button>
-            <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="calculadora('5')">5</button>
-            <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="calculadora('6')">6</button>
-            <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="calculadora('+')">+</button>
+            <button type="button" class="btn btn-dark btn-lg font-weight-light" data-value="4">4</button>
+            <button type="button" class="btn btn-dark btn-lg font-weight-light" data-value="5">5</button>
+            <button type="button" class="btn btn-dark btn-lg font-weight-light" data-value="6">6</button>
+            <button type="button" class="btn btn-dark btn-lg font-weight-light" data-value="+">+</button>
           </div>
 
           <div class="row">
-            <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="calculadora('1')">1</button>
-            <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="calculadora('2')">2</button>
-            <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="calculadora('3')">3</button>
-            <button type="button" class="btn btn-dark btn-lg enter" onclick="calculadora('=')">=</button>
+            <button type="button" class="btn btn-dark btn-lg font-weight-light" data-value="1">1</button>
+            <button type="button" class="btn btn-dark btn-lg font-weight-light" data-value="2">2</button>
+            <button type="button" class="btn btn-dark btn-lg font-weight-light" data-value="3">3</button>
+            <button type="button" class="btn btn-dark btn-lg enter" data-value="=">=</button>
           </div>
 
           <div class="row" style="margin-top: -60px">
-            <button type="button" class="btn btn-dark zero btn-lg font-weight-light"
-              onclick="calculadora('0')">0</button>
-            <button type="button" class="btn btn-dark btn-lg font-weight-light" onclick="calculadora('.')">.</button>
+            <button type="button" class="btn btn-dark zero btn-lg font-weight-light" data-value="0">0</button>
+            <button type="button" class="btn btn-dark btn-lg font-weight-light" data-value=".">.</button>
           </div>
 
         </div>
