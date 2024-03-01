@@ -3,25 +3,14 @@
 // Fazer as operações ------ ok
 // Entregar o resultado ------ ok
 
-var input = document.getElementsByTagName('input').item(0);
+import { resultado } from "./resultado.js";
+import { escreveNumerosNoInput } from "./escreveNumerosNoInput.js";
 
 function calculadora(valor) {
-    if (valor === '=') {
+    if (valor === "=") {
         resultado();
     } else {
         escreveNumerosNoInput(valor);
     }
 }
-
-function escreveNumerosNoInput(valor) {
-    if (valor === 'C') {
-        input.value = ''; //SE O VALOR FOR 'C' O INPUT SERÁ APAGADO, CASO O CONTRÁRIO O NÚMERO SERÁ ESCRITO NORMALMENTE!
-    } else {
-        input.value += valor;
-    }
-}
-
-function resultado() {
-    var calcula = eval(input.value)
-    input.value = calcula;
-}
+export { calculadora };
